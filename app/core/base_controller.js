@@ -1,4 +1,4 @@
-const { Controller } = require('egg');
+const { Controller } = require("egg");
 class BaseController extends Controller {
   get user() {
     return this.ctx.session.user;
@@ -6,10 +6,10 @@ class BaseController extends Controller {
 
   success(data) {
     this.ctx.body = {
-      message:'ok2',
+      message: "ok2",
       success: true,
       code: 200,
-      data
+      data,
     };
   }
 
@@ -17,7 +17,7 @@ class BaseController extends Controller {
     this.ctx.body = {
       success: false,
       code: 404,
-      message
+      message,
     };
   }
 
@@ -25,7 +25,7 @@ class BaseController extends Controller {
     this.ctx.body = {
       success: false,
       code: 403,
-      message
+      message,
     };
   }
 }
